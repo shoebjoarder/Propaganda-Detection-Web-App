@@ -3,6 +3,7 @@ This is an extension of my master project at the University of Duisburg-Essen. T
 
 ### TODO
 - guide to create the model
+- make links to the pretrained model and vectorizers
 - make the website ready
 - create a docker image with dependencies installed and upload it in docker hub
 - create a docker image for this web application
