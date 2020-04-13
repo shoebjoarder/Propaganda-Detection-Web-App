@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/bootstrap.min.css') }}"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/styles.css') }}"/>
+
+    <title>Propaganda Detector by Shoeb Joarder</title>
+  </head>
+  <body>
+    <!-- Cover part -->
+    <section id="cover">
+      <div id="cover-caption">
+        <div class="container">
+          <div class="col-sm-10 offset-sm-1">
+            
+            <h1>Propaganda Detection at Sentence Level</h1>
+            
+            <p>This is an extension of my master project at the University of Duisburg-Essen. The motivation of the master project was to detect the propaganda articles in websites. The project was highly successful. This is a personal project to make the propaganda detection at article level in a personalized web application. Users can input a text located in home page and predict using a binary classifier ("propaganda" or "non-propaganda").</p>
+            <p>If you have any questions, then fill up the form and send an email.</p>
+
+            <form action="" class="form-inline justify-content-center">
+              <div class="form-group">
+                <label class="sr-only">Name</label>
+                <input type="text" class="form-control form-control-lg mr-1" placeholder="Shoeb Joarder">
+              </div>
+              <div class="form-group">
+                <label class="sr-only">Email</label>
+                <input type="text" class="form-control form-control-lg mr-1" placeholder="shoeb.joarder@example.com">
+              </div>
+              <button type="submit" class="btn btn-success btn-lg">Send!</button>
+            </form>
+            <br>
+            <p>Click the arrow and start prediction!</p>
+            <a href="#wat-i-do" class="btn btn-sm btn-outline-light" role="button">&darr;</a>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+
+    <!-- Cards -->
+    <section id="wat-i-do">
+      <div class="section-content">
+        <div class="container">
+          <h2>Propaganda detection at article level</h2>
+          <p class="lead">With the rise of social media everybody is free to share their thoughts and ideas. In addition, various news media suffer from the unethical practice to deliver deliberate disinformation. Therefore, with great online speech freedom, an even greater responsibility arises – to be able to differentiate between fake, i.e. propagandistic type of text, and an objective, evidence-based view.</p>
+          <form action="{{ url_for('predict')}}" method="POST">
+              <p>Please enter your article here</p>
+              <textarea name="message" rows="4" cols="50"></textarea>
+              <br/>
+              <input type="submit" class="btn-info" value="predict">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <p>Propaganda Detection at Article Level 2019</p>
+            <p>Project owned by <a href="https://www.linkedin.com/in/shoeb-joarder/">Shoeb Joarder</a></p>
+          </div>
+          <div class="col-sm-3">
+            <ul class="list-unstyled">
+              <li><a href="">Home</a></li>
+              <li><a href="">What I do</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Latest</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <ul class="list-unstyled">
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Youtube</a></li>
+              <li><a href="">Linkedin</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+              <h6>A tiny header</h6>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias qui, cupiditate laudantium consequatur voluptatibus quia, suscipit dolor aut vero iste tempora natus quaerat doloremque fugiat accusamus eligendi placeat. Officia, voluptas.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='./js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
