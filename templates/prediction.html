@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prediction</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="proptitle">Propaganda Results</div>
+				<h2>Twitter sensitivity detector</h2>
+			</div>
+		</header>
+		<p style="color:blue;font-size:20;text-align: center;"><b>Prediction Result</b></p>
+		<div class="results">
+			{% if prediction == 1%}
+				<h2 style="color:red;" align="center">It's a Propaganda Article</h2>
+			{% elif prediction == 0%}
+				<h2 style="color:blue;" align="center">It's a Non-Propaganda Article</h2>
+			{% endif %}
+		</div>
+		<a href=".."><input type="submit" value="Go Back.."></a>
+	</body>
+</html>
